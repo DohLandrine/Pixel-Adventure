@@ -8,5 +8,10 @@
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/level-01.tmx
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure.tiled-session
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure.tiled-project
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure1.tsx
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Terrain/Terrain%20(16x16).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
