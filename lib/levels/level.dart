@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
+import 'package:pixel_adventure/actors/player.dart';
 
 class Level extends World {
   @override
@@ -15,6 +16,8 @@ class Level extends World {
 
     add(level);
     // this line adds the level to the Level class.
+
+    add(Player());
     return super.onLoad();
   }
   // As soon as we add our levels to the game it's

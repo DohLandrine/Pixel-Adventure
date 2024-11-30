@@ -6,6 +6,7 @@ import 'package:flame/game.dart';
 import 'package:pixel_adventure/levels/level.dart';
 
 class PixelAdventure extends FlameGame {
+  @override
   Color backgroundColor() => const Color(0xff211f30);
 
   late final CameraComponent cam;
@@ -13,7 +14,8 @@ class PixelAdventure extends FlameGame {
   final worlds = Level();
 
   @override
-  FutureOr<void> onLoad() {
+  FutureOr<void> onLoad() async {
+    await images.loadAllImages();
     cam = CameraComponent.withFixedResolution(
         width: 640, height: 360, world: worlds);
 
