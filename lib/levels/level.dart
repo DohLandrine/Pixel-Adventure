@@ -17,7 +17,23 @@ class Level extends World {
     add(level);
     // this line adds the level to the Level class.
 
-    add(Player());
+    final spawnPointsLayer = level.tileMap.getLayer<ObjectGroup>('Spawnpoints');
+    // grabing the layer and saying we want to spawn stuff on it
+    // based on where we put stuff
+
+    for (final spawnPoint in spawnPointsLayer!.objects) {
+      switch (spawnPoint.class_) {
+        case 'Player':
+          final player = Player(
+              character: 'Ninja Frog',
+              position: Vector2(spawnPoint.x, spawnPoint.y));
+          add(player);
+          break;
+        default:
+      }
+    }
+    // looping through all of the object in that layer and split
+    //them up how we want to
     return super.onLoad();
   }
   // As soon as we add our levels to the game it's

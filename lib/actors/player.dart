@@ -3,11 +3,14 @@ import 'dart:async';
 import 'package:flame/components.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
 
-enum PlayerStaus { idle, running }
+enum PlayerStatus { idle, running }
 
 class Player extends SpriteAnimationGroupComponent
     with HasGameRef<PixelAdventure> {
+  String character;
+  Player({position, required this.character}) :super(position: position);
   late SpriteAnimation idleAnimation;
+  late SpriteAnimation runningAnimation;
   double animationDuration = 0.05;
 
   @override
@@ -17,17 +20,24 @@ class Player extends SpriteAnimationGroupComponent
   }
 
   void _loadAllAnimation() {
-    idleAnimation = SpriteAnimation.fromFrameData(
-      game.images.fromCache('Main Characters/Ninja Frog/Idle (32x32).png'),
+    runningAnimation = _spriteAnimation(state: 'Run', amount: 12);
+    idleAnimation = _spriteAnimation(state: 'Idle', amount: 11);
+    animations = {
+      PlayerStatus.idle: idleAnimation,
+      PlayerStatus.running: runningAnimation
+    };
+    current = PlayerStatus.running;
+  }
+
+  SpriteAnimation _spriteAnimation(
+      {required String state, required int amount}) {
+    return SpriteAnimation.fromFrameData(
+      game.images.fromCache('Main Characters/$character/$state (32x32).png'),
       SpriteAnimationData.sequenced(
-        amount: 11,
+        amount: amount,
         stepTime: animationDuration,
         textureSize: Vector2.all(32),
       ),
     );
-    animations = {
-      PlayerStaus.idle: idleAnimation,
-    };
-    current = PlayerStaus.idle;
   }
 }
