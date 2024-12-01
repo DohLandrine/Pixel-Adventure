@@ -5,11 +5,14 @@ import 'package:flame_tiled/flame_tiled.dart';
 import 'package:pixel_adventure/actors/player.dart';
 
 class Level extends World {
+  String levelName;
+  Level({required this.levelName});
+
   @override
   FutureOr<void> onLoad() async {
     late TiledComponent level;
 
-    level = await TiledComponent.load('level-01.tmx', Vector2.all(16));
+    level = await TiledComponent.load('$levelName.tmx', Vector2.all(16));
     // This line makes the level and load it of size 16 by 16'
     // flame knows that assets/tiles should exist already, so
     // we just pass level-01.tmx.
