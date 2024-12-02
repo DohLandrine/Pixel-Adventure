@@ -10,6 +10,7 @@
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/level-01.tmx
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure.tiled-session
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/level-02.tmx
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure.tiled-project
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/tiles/pixel-adventure1.tsx
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Main%20Characters/Pink%20Man/Wall%20Jump%20(32x32).png
@@ -42,4 +43,6 @@
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Main%20Characters/Virtual%20Guy/Idle%20(32x32).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Terrain/Terrain%20(16x16).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin.json
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES
