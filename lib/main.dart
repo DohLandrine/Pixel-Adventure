@@ -4,15 +4,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   // To wait for flutter to
   //be initialized, before calling some other stuffs
 
-  Flame.device.fullScreen();
+  await Flame.device.fullScreen();
   // makes your game to occupy the full screen
 
-  Flame.device.setLandscape();
+  await Flame.device.setLandscape();
   // makes you game to be landscape only, on your device.
 
   PixelAdventure game = PixelAdventure();

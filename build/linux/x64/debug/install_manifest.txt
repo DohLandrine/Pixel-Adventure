@@ -41,6 +41,8 @@
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Main%20Characters/Virtual%20Guy/Double%20Jump%20(32x32).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Main%20Characters/Virtual%20Guy/Fall%20(32x32).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Main%20Characters/Virtual%20Guy/Idle%20(32x32).png
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/HUD/Joystick.png
+/home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/HUD/Knob.png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/Terrain/Terrain%20(16x16).png
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
 /home/doh-landrine/Desktop/projects/Pixel-Adventure/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin.json
