@@ -16,6 +16,7 @@ class PixelAdventure extends FlameGame
   late final CameraComponent cam;
   Player player = Player(character: 'Pink Man');
   late JoystickComponent joyStick;
+  bool showJoystick = true;
 
   @override
   FutureOr<void> onLoad() async {
@@ -29,12 +30,22 @@ class PixelAdventure extends FlameGame
     addAll([cam, worlds]);
     // adds the level in the Level class to the game.
 
-    addJoystick();
+    if (showJoystick) {
+      addJoystick();
+    }
 
     cam.viewfinder.anchor = Anchor.topLeft;
     //placing the game to start at the top left corner.
 
     return super.onLoad();
+  }
+
+  @override
+  void update(double dt) {
+    if (showJoystick) {
+      updateJoyStick();
+    }
+    super.update(dt);
   }
 
   void addJoystick() {
@@ -52,5 +63,22 @@ class PixelAdventure extends FlameGame
       margin: const EdgeInsets.only(left: 32, bottom: 32),
     );
     add(joyStick);
+  }
+
+  void updateJoyStick() {
+    switch (joyStick.direction) {
+      case JoystickDirection.left:
+      case JoystickDirection.upLeft:
+      case JoystickDirection.downLeft:
+        player.playerDirection = PlayerDirection.left;
+        break;
+      case JoystickDirection.right:
+      case JoystickDirection.upRight:
+      case JoystickDirection.downRight:
+        player.playerDirection = PlayerDirection.right;
+        break;
+      default:
+        player.playerDirection = PlayerDirection.idle;
+    }
   }
 }

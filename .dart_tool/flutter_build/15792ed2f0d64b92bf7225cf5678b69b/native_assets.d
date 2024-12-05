@@ -1,0 +1,1 @@
+ /home/doh-landrine/Desktop/projects/pixel_adventure/.dart_tool/flutter_build/15792ed2f0d64b92bf7225cf5678b69b/native_assets.yaml: 
