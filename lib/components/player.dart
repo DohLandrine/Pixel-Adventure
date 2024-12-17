@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'package:flame/components.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
 
 enum PlayerStatus { idle, running }
-
-enum PlayerDirection { left, right, idle }
 
 class Player extends SpriteAnimationGroupComponent
     with HasGameRef<PixelAdventure>, KeyboardHandler {
@@ -21,10 +20,8 @@ class Player extends SpriteAnimationGroupComponent
   double animationDuration = 0.05;
 
   // movement variables
-  PlayerDirection playerDirection = PlayerDirection.idle;
   double movementSpeed = 100;
   Vector2 velocity = Vector2.zero();
-  bool isFacingRight = true;
 
   @override
   FutureOr<void> onLoad() {
@@ -40,20 +37,13 @@ class Player extends SpriteAnimationGroupComponent
 
   @override
   bool onKeyEvent(KeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
+    double horizontalMovement = 0;
     final isLeftKeyPressed = keysPressed.contains(LogicalKeyboardKey.keyA) ||
         keysPressed.contains(LogicalKeyboardKey.arrowLeft);
     final isRightKeyPressed = keysPressed.contains(LogicalKeyboardKey.keyD) ||
         keysPressed.contains(LogicalKeyboardKey.arrowRight);
-
-    if (isLeftKeyPressed && isRightKeyPressed) {
-      playerDirection = PlayerDirection.idle;
-    } else if (isLeftKeyPressed) {
-      playerDirection = PlayerDirection.left;
-    } else if (isRightKeyPressed) {
-      playerDirection = PlayerDirection.right;
-    } else {
-      playerDirection = PlayerDirection.idle;
-    }
+    horizontalMovement += isRightKeyPressed ? 1 : 0;
+    horizontalMovement += isLeftKeyPressed ? -1 : 0;
     return super.onKeyEvent(event, keysPressed);
   }
 
@@ -80,30 +70,7 @@ class Player extends SpriteAnimationGroupComponent
   }
 
   void _updatePlayerMovement(double dt) {
-    double dirX = 0.0;
-    switch (playerDirection) {
-      case PlayerDirection.left:
-        if (isFacingRight) {
-          flipHorizontallyAroundCenter();
-          isFacingRight = false;
-        }
-        dirX = dirX - movementSpeed;
-        current = PlayerStatus.running;
-        break;
-      case PlayerDirection.right:
-        if (!isFacingRight) {
-          flipHorizontallyAroundCenter();
-          isFacingRight = true;
-        }
-        dirX = dirX + movementSpeed;
-        current = PlayerStatus.running;
-        break;
-      case PlayerDirection.idle:
-        current = PlayerStatus.idle;
-        break;
-      default:
-    }
-    velocity = Vector2(dirX, 0.0);
-    position = position + velocity * dt;
+    velocity = Vector2(horizontalMovement, 0.0);
+    position.x = position.x + velocity.x * dt;
   }
 }
